@@ -4,6 +4,7 @@ import express from "express";
 import webpack from "webpack";
 import config from "../webpack.config.dev.js";
 import path from "path";
+import chalk from "chalk";
 // import open from "open";
 
 const app = express();
@@ -20,7 +21,7 @@ app.listen(port, function (err) {
 		console.log(err);
 	} else {
 
-		console.log("Server running on port " + port);
+		console.log(chalk.green.underline("Server running on port " + port));
 	}
 });
 
