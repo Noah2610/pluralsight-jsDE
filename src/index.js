@@ -4,6 +4,7 @@ import "./index.css";
 import {getUsers, deleteUser} from "./api/userApi.js";
 
 // Populate table of users via API call.
+
 getUsers().then(result => {
   let usersBody = "";
 
@@ -15,7 +16,7 @@ getUsers().then(result => {
       <td>${user.lastName}</td>
       <td>${user.email}</td>
       </tr>`
-  });
+  })
 
   global.document.getElementById('users').innerHTML = usersBody;
 
